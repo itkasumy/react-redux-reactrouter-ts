@@ -2,14 +2,15 @@ const ADD_GUN = 'addGun'
 const MIN_GUN = 'minGun'
 
 // reducer
-export const counter = (state, action) => {
+export const counter = (state=10, action) => {
+  console.log(state)
   switch (action.type) {
     case ADD_GUN:
       return state + 1
     case MIN_GUN:
       return state - 1
     default:
-      return 10
+      return state
   }
 }
 
