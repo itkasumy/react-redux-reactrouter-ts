@@ -4,6 +4,16 @@ import 'antd-mobile/dist/antd-mobile.css';
 import { connect } from 'react-redux';
 import { addGun, minGun, addGunAsync } from './index.redux';
 
+// const mapStateToProps = (state) => {
+//   return { num: state }
+// }
+
+// const actionCreators = { addGun, minGun, addGunAsync }
+
+@connect(
+  state => ({num: state}), 
+  { addGun, minGun, addGunAsync }
+)
 class App extends React.Component {
   // constructor(props) {
   //   super(props);
@@ -21,12 +31,12 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {num: state}
-}
+// const mapStateToProps = (state) => {
+//   return {num: state}
+// }
 
-const actionCreators = { addGun, minGun, addGunAsync }
+// const actionCreators = { addGun, minGun, addGunAsync }
 
-App = connect(mapStateToProps, actionCreators)(App)
+// App = connect(mapStateToProps, actionCreators)(App)
 
 export default App

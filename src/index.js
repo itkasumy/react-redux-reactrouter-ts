@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import App from './App';
 import { counter } from './index.redux';
 
-const chromeReduxDevtools = window.devToolsExtension ? window.devToolsExtension : () => { }
+const chromeReduxDevtools = window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__ : () => { }
 const store = createStore(counter, compose(
   applyMiddleware(thunk),
   chromeReduxDevtools()
