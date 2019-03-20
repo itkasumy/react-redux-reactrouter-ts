@@ -8,6 +8,7 @@ import Auth from './Auth';
 import DashBoard from './DashBoard';
 // import { counter } from './index.redux';
 import reducer from './reducer';
+import './config'
 
 const chromeReduxDevtools = window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__ : () => { }
 const store = createStore(reducer, compose(
