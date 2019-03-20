@@ -19,7 +19,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route path="/login" component={Auth} />
-        <Route path="/dashboard" exact component={DashBoard} />
+        <Route path="/dashboard" component={DashBoard} />
         {/* <Redirect to="/dashboard"></Redirect> */}
       </Switch>
     </BrowserRouter>

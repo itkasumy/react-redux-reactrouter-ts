@@ -26,7 +26,6 @@ export default class DashBoard extends React.Component {
           </li>
         </ul>
         <Switch>
-          {/* <Route path="/login" component={Auth} /> */}
           <Route path="/dashboard" exact component={App}></Route>
           <Route path="/dashboard/erying" component={Erying}></Route>
           <Route path="/dashboard/qibinglian" component={QiBingLian}></Route>
