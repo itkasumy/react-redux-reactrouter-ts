@@ -1,22 +1,16 @@
-import React from 'react';
-import { Button } from 'antd-mobile';
-import 'antd-mobile/dist/antd-mobile.css';
-import { connect } from 'react-redux';
-import { addGun, minGun, addGunAsync } from './index.redux';
-
-// const mapStateToProps = (state) => {
-//   return { num: state }
-// }
-
-// const actionCreators = { addGun, minGun, addGunAsync }
+import React from 'react'
+import { Button } from 'antd-mobile'
+import 'antd-mobile/dist/antd-mobile.css'
+import { connect } from 'react-redux'
+import { addGun, minGun, addGunAsync } from './index.redux'
 
 @connect(
-  state => ({num: state}), 
+  state => ({ num: state }),
   { addGun, minGun, addGunAsync }
 )
 class App extends React.Component {
   // constructor(props) {
-  //   super(props);
+  //   super(props)
   // }
 
   render() {
@@ -30,13 +24,5 @@ class App extends React.Component {
     )
   }
 }
-
-// const mapStateToProps = (state) => {
-//   return {num: state}
-// }
-
-// const actionCreators = { addGun, minGun, addGunAsync }
-
-// App = connect(mapStateToProps, actionCreators)(App)
 
 export default App

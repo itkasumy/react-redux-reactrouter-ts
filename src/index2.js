@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux'
-import { BrowserRouter, Route, Link, Redirect, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Link} from 'react-router-dom'
 import App from './App';
 import { counter } from './index.redux';
 
@@ -21,13 +21,6 @@ function QiBingLian(params) {
   return <h3>骑兵连</h3>
 }
 
-// class Ts extends React.Component { 
-//   render() {
-//     console.log(this.props)
-//     return <div>测试组件{this.props.match.params.location}</div>
-//   }
-// }
-
 ReactDOM.render(
   <Provider store={store}>
     <div>
@@ -40,16 +33,12 @@ ReactDOM.render(
             <Link to="/erying">二营</Link>
           </li>
           <li>
-            <Link to="/qibinglian">骑兵连</Link>
+            <Link to="qibinglian">骑兵连</Link>
           </li>
         </ul>
-        <Switch>
-          <Route path="/" exact component={App}></Route>
-          <Route path="/erying" component={Erying}></Route>
-          <Route path="/qibinglian" component={QiBingLian}></Route>
-          {/* <Route path="/:location" component={Ts}></Route> */}
-          <Redirect to="/erying"></Redirect>
-        </Switch>
+        <Route path="/" exact component={App}></Route>
+        <Route path="/erying" component={Erying}></Route>
+        <Route path="/qibinglian" component={QiBingLian}></Route>
       </BrowserRouter>
     </div>
   </Provider>,
